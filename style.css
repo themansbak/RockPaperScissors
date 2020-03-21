@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "score score score"
+    "icon  icon  icon"
+    ". reset .";
+  justify-content: center;
+  text-align: center;
+}
+.p-score {
+  grid-area: score;
+}
+.div-icons {
+  grid-area: icon;
+}
+.btn-menu {
+  grid-area: reset;
+}

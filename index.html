@@ -1,33 +1,21 @@
-<script>
-  let computerPlay = () => {
-    const rand = Math.floor(Math.random()*3);
-    switch(Math.floor(Math.random()*3)) {
-      case 0:
-        return 'Rock';
-      case 1:
-        return 'Paper';
-      case 2:
-        return 'Scissors';
-    }
-  }
-  let playRound = (playerSelection, computerSelection) => {
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
-    if (playerSelection === 'rock') {
-      if (computerSelection === 'scissors') return 'Rock beats scissors! You win!';
-      else if (computerSelection === 'paper') return 'Paper beats rocks! You lose!';
-      else if (computerSlection === 'rock') return 'Tie! Rock vs Rock';
-    } else if (playerSelection === 'scissors') {
-      if (computerSelection === 'scissors') return 'Rock beats scissors! You win!';
-      else if (computerSelection === 'paper') return 'Paper beats rocks! You lose!';
-      else if (computerSlection === 'rock') return 'Tie! Rock vs Rock';
-    } else if (playerSelection === 'paper') {
-      if (computerSelection === 'scissors') return 'Scissors beats paper! You lose!';
-      else if (computerSelection === 'paper') return 'Tie! Paper vs paper';
-      else if (computerSlection === 'rock') return 'Paper beats rock! You win!';
-    }
-  }
-  const playerSelection = 'rock';
-  const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection))
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="p-score" id="score">Running score:</h1>
+      <div class="div-icons">
+        <img class="img-icon" id="rock" src="imgs/rock.jpeg">
+        <img class="img-icon" id="paper" src="imgs/paper.jpeg">
+        <img class="img-icon" id="scissors" src="imgs/scissors.jpeg">
+      </div>
+      <button class="btn-menu">Reset</button>
+    </div>
+  </body>
+</html>
+
+<script src="source.js"></script>
