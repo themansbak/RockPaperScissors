@@ -1,19 +1,46 @@
 .container {
   width: 100%;
   display: grid;
+  grid-auto-columns: minmax(min-content, 100px);
   grid-template-areas:
-    "score score score"
+    ". score ."
+    ". result ."
     "icon  icon  icon"
     ". reset .";
   justify-content: center;
-  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.p-score {
+.h-result {
   grid-area: score;
+  min-width: 200px;
+}
+.p-result {
+  grid-area: result;
+  min-width: 200px;
 }
 .div-icons {
   grid-area: icon;
+  text-align: center;
+}
+.img-icon {
+  width: 15%;
+  height: 15%;
+  padding: 10px;
+  border-radius: 15px;
+  border-width: 5px;
+}
+.img-icon:hover {
+  cursor: pointer;
+  background: black;
+  transform: scale(1.1);
 }
 .btn-menu {
   grid-area: reset;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.btn-menu:hover {
+  cursor: pointer;
+  background: gray;
+  transform: scale(1.1);
 }
